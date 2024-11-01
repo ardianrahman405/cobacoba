@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
+
+body {
+    background: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    line-height: 4rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: .5px solid #ffffff52;
+    border-width: 80%;
+    margin-bottom: 1rem;
+}
+
+/* Mengatur left-nav */
+.left-nav {
+    display: flex; /* Menggunakan flex untuk mengatur tata letak */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+}
+
+/* Gaya untuk logo */
+.logo {
+    width: 50px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+    height: auto; /* Memastikan proporsi logo tetap */
+    margin-right: 10px;
+}    
+
+#navbar ul {
+    list-style: none;
+}
+
+#navbar ul li {
+    margin: 0px 1rem;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+
+}
+
+.right {
+    display: none;
+}
+
+.checkBtn {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.nav-col a:hover {
+    border-radius: .4rem;
+    color: #1f1f38;
+    background-color: #fff;
+}
+
+
+/* Home Section */
+.home-left,
+.home-right {
+    width: 48%;
+    padding: 2rem;
+}
+
+.home-right {
+    padding: 0;
+}
+
+.home-left h6 {
+    color: hsl(240deg 8% 43%);
+    margin: 1rem 0;
+    margin-left: 3px;
+    font-size: 1.2rem;
+}
+
+.loader {
+    color: rgb(124, 124, 124);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 40px;
+    padding: 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+  }
+  
+  .words {
+    overflow: hidden;
+    position: relative;
+  }
+  .words::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      var(--bg-color) 10%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg-color) 90%
+    );
+    z-index: 20;
+  }
+  
+  .word {
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: #956afa;
+    animation: spin_4991 4s infinite;
+  }
+  
+  @keyframes spin_4991 {
+    10% {
+      -webkit-transform: translateY(-102%);
+      transform: translateY(-102%);
+    }
+  
+    25% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  
+    35% {
+      -webkit-transform: translateY(-202%);
+      transform: translateY(-202%);
+    }
+  
+    50% {
+      -webkit-transform: translateY(-200%);
+      transform: translateY(-200%);
+    }
+  
+    60% {
+      -webkit-transform: translateY(-302%);
+      transform: translateY(-302%);
+    }
+  
+    75% {
+      -webkit-transform: translateY(-300%);
+      transform: translateY(-300%);
+    }
+  
+    85% {
+      -webkit-transform: translateY(-402%);
+      transform: translateY(-402%);
+    }
+  
+    100% {
+      -webkit-transform: translateY(-400%);
+      transform: translateY(-400%);
+    }
+  }
+
+
+.home-left h1 {
+    font-size: 2.5rem;
+}
+
+.home-right {
+    position: relative;
+}
+
+.home-right img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    border-radius: 62%;
+    height: 100%;
+}
+
+.circle {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    padding: .5rem;
+    position: relative;
+}
+
+/* About Section */
+.about-left,
+.about-right {
+    width: 48%;
+}
+
+.about-right {
+    padding-right: 4rem;
+}
+
+.aboout-left {
+    position: relative;
+}
+
+.book {
+    position: relative;
+    border-radius: 10px;
+    border: .5px solid #3c21eb;
+    width: 290px;
+    height: 490px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+  
+  .cover {
+    top: 0;
+    position: absolute;
+    background-color: #2c2c6c;
+    width: 100%;
+    height: 102%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+  }
+  
+  .book img {
+    width: 290px;
+    height: 490px;
+    border-radius: 10px;
+}
+
+.about-content p {
+    margin-bottom: 2rem;
+}
+
+
+/* Skills */
+#skills {
+    margin-top: 3rem; /* Ruang di dalam section */
+}
+
+
+.skills-left {
+    flex: 1; /* Menggunakan flex untuk mengatur lebar */
+    min-width: 200px; /* Minimum lebar untuk menghindari pemotongan */
+    display: flex; /* Mengatur tampilan flex */
+    justify-content: center;
+}    
+
+.skills-left img {
+    width: 70%;
+}
+
+.skills-right {
+    width: 50%;
+}
+
+.skillss-container {
+    width: 100%;
+}
+
+.bar.html {
+    width: 90%;
+    height: .5rem;
+    background-color: #e54c21;
+    margin: 2rem 0;
+    border-radius: 12px;
+}
+
+.bar.css {
+    width: 80%;
+    height: .5rem;
+    background-color: #00a0e4;
+    margin: 2rem 0;
+    border-radius: 12px;
+}
+
+.bar.bootstrap {
+    width: 65%;
+    height: .5rem;
+    background-color: #7952b3;
+    margin: 2rem 0;
+    border-radius: 12px;
+}
+
+.bar.js {
+    width: 45%;
+    height: .5rem;
+    background-color: yellow;
+    margin: 2rem 0;
+    border-radius: 12px;
+}
+
+.learning {
+    width: 100%;
+    height: .5rem;
+    background-color: #61dbfb;
+    margin: 1rem 0;
+    border-radius: 12px;
+}
+
+.bar {
+   margin-bottom: 1.5rem;
+   position: relative;
+   height: .5rem;
+}
+
+.bar-content {
+   position: absolute;
+   bottom: 10px;
+}
+
+.left {
+    left: 0;
+}
+
+.right-skills {
+   right: 0;
+}
+
+
+
+/* Services Container */
+.services-container {
+    margin: auto;
+    overflow: hidden;
+    width: 80%;
+}
+
+.test-item {
+    width: 20rem;
+    margin: 0 2rem;
+    background: #2c2c6c;
+    border: .5px solid #2132eb;
+    border-radius: 1.5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: all .5s;
+}
+
+.test-item:hover {
+    background-color: transparent;
+}
+
+.test-item img {
+    margin-bottom: 1.3rem;
+    width: 80%;
+}
+
+.test-item h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.projects li .fa-solid {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.3rem;
+}
+
+.test-item p {
+    line-height: 20px;
+    font-size: .9rem;
+}
+
+
+/* Projects Section */
+.projects-container {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    bottom: 2rem;
+    height: 10rem;
+    position: relative;
+}
+
+.image-container img {
+    border-radius: 1rem;
+}
+
+.image-container .p-one {
+    width: 200px;
+}
+
+.p-three {
+    background: url('project.png');
+}
+
+.p-four {
+    background: url('project.png');
+}
+
+/* Make images in Projects section wider */
+#projects .test-item img {
+    width: 100%;            /* Make images fill the container width */
+    height: auto;           /* Maintain aspect ratio */
+    border-radius: 8px;     /* Optional: Add rounded corners */
+    object-fit: cover;      /* Ensures the image covers the container fully */
+}
+
+
+.projects-item {
+    overflow: hidden;
+    width: 20rem;
+    margin: 1rem;
+    background: #2c2c6c;
+    border: .5px solid #2132eb;
+    border-radius: 1.5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.projects-item h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.projects-item p {
+    line-height: 20px;
+    font-size: .9rem;
+}
+
+.image-container {
+    width: 100%; /* Make the container full width */
+    height: 235px; /* Set a specific height */
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Position relative for absolute positioning of the image */
+    border-radius: 1vh;
+}
+
+.image-container img {
+    width: 100%; /* Make the image full width */
+    height: auto; /* Make the image full height */
+    object-fit: cover; /* Cover the entire container */
+    position: absolute; /* Position absolutely to fill the container */
+    top: 55%; /* Center the image vertically */
+    left: 50%; /* Center the image horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to center */
+    border-radius: 0;
+}
+
+/* Contact me Section */
+.form {
+    display: flex;
+    width: 80%;
+    padding: 0 2rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-div input,
+textarea {
+    border: 2px solid rgba(77, 181, 255, .4);
+    border-radius: .5rem;
+    width: 100%;
+    margin: 0.5rem 0rem;
+    font-size: .9rem;
+    background: transparent;
+    margin: 0.5rem 0rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    resize: none;
+}
+
+
+
+/* Footer Section  */
+#footer {
+    background-color: #4db5ff;
+    padding: 2rem;
+    padding-bottom: 4rem;
+}
+
+ul li {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #1f1f38;
+    transition: all .5s;
+}
+
+ul li a:hover {
+    color: #fff;
+}
+
+
+.font-awesome {
+    margin: 1.1rem auto;
+}
+
+.font-awesome li i {
+    background-color: #1f1f38;
+    padding: 0.6rem;
+    border: 1px solid #1f1f38;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.font-awesome li i:hover {
+    border: 1px solid #1f1f38;
+    border-radius: .5rem;
+    background: transparent;
+    color: #1f1f38;
+}
+
+#footer p {
+    color: #1f1f38;
+    font-size: .9srem;
+}
+
+
+/* Scroll Top */
+#scroll-top {
+    background-color: #4db5ff;
+    color: #151527;
+    padding: 9px;
+    border-radius: 9px;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    bottom: 1rem;
+    right: 4%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+
+
+/* Bottom Navigator */
+#bottom {
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    bottom: 0rem;
+}
+
+#bottom .bottom-nav {
+    height: 4rem;
+    padding: 0 2rem;
+    background-color: #151527;
+    border-radius: 3rem;
+    z-index: 1000;
+    display: -webkit-inline-box;
+}
+
+#bottom .bottom-nav li {
+    color: #fff;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+}
+
+#bottom .bottom-nav ul a {
+    text-decoration: none;
+
+}
+
+#bottom .bottom-nav li:hover {
+    background-color: #4db5ff;
+}
+
+#bottom .bottom-nav li:active {
+    background-color: #4db5ff;
+}
+
+.cpy-white {
+    color: white;
+}
+
+
+/* Utility Classes */
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.s-between {
+    justify-content: space-between;
+}
+
+.s-around {
+    justify-content: space-around;
+}
+
+.s-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+
+.p-relative {
+    position: relative;
+}
+
+.t-white {
+    color: #fff;
+}
+
+.bg-color {
+    background-color: #1f1f38;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.my-2 {
+    margin: 2rem 0;
+}
+
+.f-2 {
+    font-size: 2rem;
+}
+
+.m-b-1 {
+    margin-bottom: 1rem;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.h-50 {
+    height: 50vh;
+}
+
+.mx-1 {
+    margin: 0 1rem;
+}
+
+.m-top {
+    margin-top: 1rem;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.btn {
+    margin-left: 0 .5rem;
+    font-size: 1rem;
+    color: #4db5ff;
+    cursor: pointer;
+    padding: 0.75rem 1.2rem;
+    border: 1px solid #4db5ff;
+    border-radius: 0.4rem;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style for the icon Visit button */
+.btn-visit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 40px;                /* Icon button size */
+    height: 40px;
+    background-color: #007BFF;  /* Button background color */
+    color: #fff;
+    border-radius: 50%;         /* Circular button */
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+.buttons a,
+#hireme {
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: #1f1f38;
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.live {
+    color: #1f1f38;
+    background-color: #4db5ff;
+}
+
+/* Default layout: horizontal alignment */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 1rem; /* Add padding to prevent edge cutting */
+}
+
+/* Responsive layout for screens 1024px or less */
+@media screen and (max-width: 1024px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .test-item {
+        width: 100%; /* Make each item take full width */
+        max-width: 600px; /* Optional: set a max-width */
+    }
+
+    .test-item img {
+        width: 100%; /* Ensure images are responsive */
+        height: auto;
+    }
+}
+
+/* Mobile layout for screens 768px or less */
+@media screen and (max-width: 768px) {
+    /* Container adjustments for smaller screens */
+    .services-container {
+        padding: 1rem; /* Add more padding to prevent edges from cutting off */
+        max-width: 100%; /* Ensure container doesn’t exceed screen width */
+    }
+
+    .test-item {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto; /* Center the item */
+        box-sizing: border-box; /* Ensures padding does not affect overall width */
+    }
+
+    /* Text and button size adjustments */
+    .test-item h1 {
+        font-size: 1.5rem; /* Adjust font size for headings */
+        text-align: center;
+    }
+
+    .test-item p {
+        font-size: 1rem; /* Adjust font size for paragraph text */
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    /* Button adjustments */
+    .btn-visit {
+        font-size: 0.9rem; /* Adjust font size of button text */
+        padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+}
